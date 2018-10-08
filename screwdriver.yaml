@@ -8,6 +8,7 @@ jobs:
             - ~commit
         steps:
             - install: npm install
+            - install-cli: - wget -q -O - https://github.com/screwdriver-cd/store-cli/releases/latest | egrep -o '/screwdriver-cd/store-cli/releases/download/v[0-9.]*/store-cli_linux_amd64' | wget --base=http://github.com/ -i - -O store-cli && chmod +x store-cli
             - cli-set: ./store-cli set mycache ./node_modules --type=cache --scope=events
             - echo: echo done
             
@@ -20,7 +21,7 @@ jobs:
     with-cache:
         requires: [main]
         steps:
-            - wget -q -O - https://github.com/screwdriver-cd/store-cli/releases/latest | egrep -o '/screwdriver-cd/store-cli/releases/download/v[0-9.]*/store-cli_linux_amd64' | wget --base=http://github.com/ -i - -O store-cli && chmod +x store-cli
+            - install-cli: - wget -q -O - https://github.com/screwdriver-cd/store-cli/releases/latest | egrep -o '/screwdriver-cd/store-cli/releases/download/v[0-9.]*/store-cli_linux_amd64' | wget --base=http://github.com/ -i - -O store-cli && chmod +x store-cli
             - cli-get: ./store-cli get mycache --type=cache --scope=events
             - install-ci: npm install
             - echo: echo done
