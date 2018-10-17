@@ -13,5 +13,5 @@ jobs:
     no-cache:
         requires: [main]
         steps:
-            - install-ci: npm install
+            - install-again: npm install
             - echo: echo done
