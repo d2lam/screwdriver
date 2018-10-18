@@ -10,7 +10,7 @@ jobs:
             - install: npm install
             - pwd: pwd
             - ls: ls
-            - store: cd .. && store-cli set ./node_modules/ --type=cache --scope=event
+            - store: cd .. && store-cli set ./screwdriver/node_modules/ --type=cache --scope=event
             - ls2: ls -la
             - echo: echo done
             
