@@ -11,6 +11,7 @@ jobs:
             - pwd: pwd
             - ls: ls
             - store: store-cli set ./node_modules/ --type=cache --scope=event
+            - ls2: ls -la
             - echo: echo done
             
     cache:
