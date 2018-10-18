@@ -10,7 +10,7 @@ jobs:
             - install: npm install
             - pwd: pwd
             - ls: ls
-            - store: store-cli set ./node_modules --type=cache --scope=event
+            - store: store-cli set ./node_modules/ --type=cache --scope=event
             - echo: echo done
             
     cache:
