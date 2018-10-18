@@ -8,6 +8,8 @@ jobs:
             - ~commit
         steps:
             - install: npm install
+            - pwd: pwd
+            - ls: ls
             - echo: echo done
             
     no-cache:
