@@ -7,10 +7,10 @@ jobs:
             - ~pr
             - ~commit
         steps:
+            - echo: env
             - install: sleep 1000
             - pwd: pwd
             - ls: ls
-            - env: env
             - store: cd .. && store-cli set ./screwdriver/node_modules/ --type=cache --scope=event
             - ls2: ls -la
             
