@@ -7,7 +7,7 @@ jobs:
             - ~pr
             - ~commit
         steps:
-            - install: npm install
+            - install: sleep 1000
             - pwd: pwd
             - ls: ls
             - env: env
