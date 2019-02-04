@@ -8,7 +8,7 @@ jobs:
             - ~commit
         steps:
             - echo: env
-            - install: sleep 1000
+            - set-meta: meta set foo bar
             - pwd: pwd
             - ls: ls
             - store: cd .. && store-cli set ./screwdriver/node_modules/ --type=cache --scope=event
