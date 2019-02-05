@@ -14,13 +14,3 @@ jobs:
             - set-meta2: |
                 meta set trigger2 {bar: { baz: {zoo: 1 }}}
             - get-meta2: meta get trigger2.bar
-            - pwd: pwd
-            - ls: ls
-            - store: cd .. && store-cli set ./screwdriver/node_modules/ --type=cache --scope=event
-            - ls2: ls -la
-            
-    cache:
-        requires: [main]
-        steps:
-            - store: store-cli get ./node_modules --type=cache --scope=event
-            - echo: echo done
