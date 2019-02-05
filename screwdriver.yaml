@@ -8,7 +8,10 @@ jobs:
             - ~commit
         steps:
             - echo: env
-            - set-meta: meta set foo bar
+            - set-meta: meta set trigger '{bar: { baz: {zoo: 1 }}}'
+            - get-meta: meta get trigger.bar
+            - set-meta2: meta set trigger2 {bar: { baz: {zoo: 1 }}}
+            - get-meta2: meta get trigger2.bar
             - pwd: pwd
             - ls: ls
             - store: cd .. && store-cli set ./screwdriver/node_modules/ --type=cache --scope=event
