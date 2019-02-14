@@ -16,5 +16,4 @@ jobs:
             - set-meta2: |
                 meta set trigger2 {bar: { baz: {zoo: 1 }}}
             - get-meta2: meta get trigger2.bar
-            - rm: rm /sd/meta/meta.json
             - cat: cat /sd/meta/meta.json
