@@ -8,8 +8,8 @@ jobs:
             - ~commit
         steps:
             - echo: env
-            - set1: meta set pipelineId $SD_PIPELINE_ID
             - get1: meta get pipelineId
+            - cat: cat /sd/meta/meta.json
             - set-meta: |
                 meta set trigger '{bar: { baz: {zoo: 1 }}}'
             - get-meta: meta get trigger.bar
