@@ -17,3 +17,14 @@ jobs:
                 meta set trigger2 {bar: { baz: {zoo: 1 }}}
             - get-meta2: meta get trigger2.bar
             - cat: cat /sd/meta/meta.json
+    job2:
+        requires:
+            - main
+        steps
+            - echo: env
+    job3:
+        requires:
+            - main
+            - job2
+        steps:
+            - echo: env
