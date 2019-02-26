@@ -20,7 +20,7 @@ jobs:
     job2:
         requires:
             - main
-        steps
+        steps:
             - echo: env
     job3:
         requires:
