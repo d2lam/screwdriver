@@ -10,7 +10,7 @@ jobs:
             - ~commit
         steps:
             - echo: env
-            - depth: git log
+            - depth: git log --one-line
             - get1: meta get meta.build.pipelineId
             - metacat: cat /sd/meta/meta.json
             - set-meta: |
