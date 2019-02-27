@@ -3,6 +3,8 @@ shared:
 
 jobs:
     main:
+        environment:
+            GIT_SHALLOW_CLONE_DEPTH: 15
         requires:
             - ~pr
             - ~commit
