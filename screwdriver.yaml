@@ -6,6 +6,8 @@ jobs:
         requires:
             - ~pr
             - ~commit
+        environment:
+            GIT_SHALLOW_CLONE_DEPTH: 10
         steps:
             - echo: env
             - depth: git log --oneline
