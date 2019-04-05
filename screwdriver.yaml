@@ -11,6 +11,7 @@ jobs:
             GIT_SHALLOW_CLONE_SINGLE_BRANCH: true
         steps:
             - echo: env
+            - sleep: sleep 10000
             - depth: git log --oneline
             - get1: meta get meta.build.pipelineId
             - metacat: cat /sd/meta/meta.json
