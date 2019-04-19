@@ -14,4 +14,5 @@ jobs:
             - echo: env
             - ls: ls -la
             - test: source testexport
-            - echo2: env
+            - teardown-env: env
+            - teardown-echo: echo $TESTB
