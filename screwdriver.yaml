@@ -11,4 +11,5 @@ jobs:
             TESTB: ${TESTA}2
         steps:
             - echo: env
-            - teardown-me: sleep 10000
+            - test: ./testexport
+            - echo2: env
