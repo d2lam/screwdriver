@@ -11,5 +11,5 @@ jobs:
             TESTB: ${TESTA}2
         steps:
             - echo: env
-            - test: ./testexport
+            - test: . testexport
             - echo2: env
