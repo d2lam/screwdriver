@@ -7,11 +7,8 @@ jobs:
             - ~pr
             - ~commit
         environment:
-            TESTA: 1
+            TESTA: "myenv"
             TESTB: ${TESTA}2
         steps:
             - echo: env
-            - ls: ls -la
-            - test: source testexport
-            - teardown-env: env
             - teardown-echo: echo $TESTB
