@@ -7,8 +7,8 @@ jobs:
             - ~pr
             - ~commit
         environment:
-            TESTA: $'myenv\nhello'
-            TESTB: ${TESTA}2
+            TESTA: "myenv\nhello"
+            TESTB: "${TESTA}2"
         steps:
             - echo: env
             - teardown-echo: echo $TESTB
