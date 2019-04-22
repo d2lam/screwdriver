@@ -9,7 +9,6 @@ jobs:
         environment:
             TESTA: 1
             TESTB: ${TESTA}2
-            USER_SHELL_BIN: bash
         steps:
             - echo: env
             - ls: ls -la
