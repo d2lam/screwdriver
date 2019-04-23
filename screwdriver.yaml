@@ -11,4 +11,5 @@ jobs:
             TESTB: "${TESTA}2"
         steps:
             - echo: env
+            - export: export -p
             - teardown-echo: echo $TESTB
