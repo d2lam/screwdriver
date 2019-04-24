@@ -7,8 +7,8 @@ jobs:
             - ~pr
             - ~commit
         environment:
-            TESTA: "myenv\nh'el\\"lo"
-            TESTB: "${TESTA}2"
+            TESTA: myenv\nh'el\\"lo
+            TESTB: ${TESTA}2
         steps:
             - echo: env
             - export: export -p
