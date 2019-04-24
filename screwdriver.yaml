@@ -7,7 +7,7 @@ jobs:
             - ~pr
             - ~commit
         environment:
-            TESTA: myenv\nh'el\\"lo
+            TESTA: myenv\nh'el\"lo
             TESTB: ${TESTA}2
         steps:
             - echo: env
