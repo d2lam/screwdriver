@@ -12,6 +12,6 @@ jobs:
         steps:
             - echo: env
             - export: export -p
-            - cat: ls /tmp
+            - cat: cat /tmp/env_base
             - teardown-echo1: echo $TESTA
             - teardown-echo: echo $TESTB
