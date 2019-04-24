@@ -12,4 +12,5 @@ jobs:
         steps:
             - echo: env
             - export: export -p
+            - teardown-echo1: echo $TESTA
             - teardown-echo: echo $TESTB
