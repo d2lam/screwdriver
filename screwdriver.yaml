@@ -7,11 +7,10 @@ jobs:
             - ~pr
             - ~commit
         environment:
-            TESTA: myenv\nh'el\"lo
+            TESTA: myenv\nh'el"lo
             TESTB: ${TESTA}2
         steps:
             - echo: env
             - export: export -p
-            - cat: cat /tmp/env_base
             - teardown-echo1: echo "$TESTA"
             - teardown-echo: echo $TESTB
