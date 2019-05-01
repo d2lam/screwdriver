@@ -9,6 +9,7 @@ jobs:
         environment:
             TESTA: myenv\nh'el"lo
             TESTB: ${TESTA}2
+            BLAH: $ARTIFACTS_DIR/blah
         steps:
             - echo: env
             - export: export -p
