@@ -8,11 +8,9 @@ jobs:
             - ~commit
         environment:
             TESTA: myenv\nh'el"lo
-            TESTB: ${TESTA}2
+            TESTB: ${TESTA}world
             BLAH: $ARTIFACTS_DIR/blah
+            SECRET: ${MYSECRET}issafe
         steps:
-            - echo: env
+            - teardownecho: env
             - export: export -p
-            - setenv: export SD_PIPELINE_ID=1 && echo $SD_PIPELINE_ID
-            - teardown-echo1: echo "$TESTA"
-            - teardown-echo: echo $TESTB
