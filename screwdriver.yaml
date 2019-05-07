@@ -7,6 +7,7 @@ jobs:
             - ~pr
             - ~commit
         environment:
+            ARTIFACTS_DIR: usertestpath
             TESTA: myenv\nh'el"lo
             TESTB: ${TESTA}world
             BLAH: $ARTIFACTS_DIR/blah
