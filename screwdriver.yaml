@@ -15,3 +15,8 @@ jobs:
         steps:
             - teardownecho: env
             - export: export -p
+    second:
+        requires: [main]
+        steps:
+            - teardownecho: env
+            - export: export -p
