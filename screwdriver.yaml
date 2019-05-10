@@ -6,6 +6,7 @@ shared:
         TESTB: ${TESTA}world
         BLAH: $ARTIFACTS_DIR/blah
         SECRET: ${MYSECRET}issafe
+        TESTDEPLOY: $APP.yaml
 
 jobs:
     main:
@@ -15,6 +16,7 @@ jobs:
         steps:
             - teardownecho: env
             - export: export -p
+            - deploy: APP=blah && echo $TESTDEPLOY
         secrets:
             - MYSECRET
     second:
