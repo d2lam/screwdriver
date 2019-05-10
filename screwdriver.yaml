@@ -1,17 +1,17 @@
 shared:
     image: node:8
+    environment:
+        ARTIFACTS_DIR: usertestpath
+        TESTA: myenv\nh'el"lo
+        TESTB: ${TESTA}world
+        BLAH: $ARTIFACTS_DIR/blah
+        SECRET: ${MYSECRET}issafe
 
 jobs:
     main:
         requires:
             - ~pr
             - ~commit
-        environment:
-            ARTIFACTS_DIR: usertestpath
-            TESTA: myenv\nh'el"lo
-            TESTB: ${TESTA}world
-            BLAH: $ARTIFACTS_DIR/blah
-            SECRET: ${MYSECRET}issafe
         steps:
             - teardownecho: env
             - export: export -p
