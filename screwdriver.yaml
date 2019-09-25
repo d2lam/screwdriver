@@ -9,6 +9,10 @@ shared:
         TESTDEPLOY: $APP.yaml
 
 jobs:
+    firstjob:
+        requires: [~sd@989:job1, ~sd@989:job2, ~sd@989:job2]
+        steps:
+            - external: echo hello
     main:
         requires:
             - ~pr
